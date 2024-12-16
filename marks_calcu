@@ -1,0 +1,28 @@
+import java.util.Scanner;
+// import java.io.math;
+class Calculator{
+   
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        // System.out.println("enter the no.of subjects:");
+        // int s=sc.nextInt();
+        System.out.println("mark of s1");
+        double a=sc.nextDouble();
+        System.out.println("mark of s2");
+        double b=sc.nextDouble();
+        System.out.println("mark of s3");
+        double c=sc.nextDouble();
+        System.out.println("mark of s4");
+        double d=sc.nextDouble();
+        System.out.println("mark of s5");
+        double e=sc.nextDouble();
+        double total_marks=500;
+        double sum=a+b+c+d+e;
+        double percentage=(sum/total_marks)*100;
+        System.out.println("Percentage is:"+ percentage);
+        sc.close();
+        
+    }
+    
+
+}
