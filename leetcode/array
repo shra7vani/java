@@ -1,0 +1,27 @@
+public class Solution{
+    public static void main(String[] args){
+        Solution solution=new Solution();
+        int a[]={4,5,8,9,41};
+        int target=13;
+        int[] result = solution.twoSum(a, target);
+        
+        // Print the result array
+        if (result.length == 0) {
+            System.out.println("No solution found.");
+        } else {
+            System.out.println("Indices: " + result[0] + ", " + result[1]);
+        }
+    }
+    public int[] twoSum (int[] nums ,int target){
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[j]==target-nums[i]){
+                    return  new int[] {i,j};
+                }
+            }
+        }
+        return new int [] {};
+
+    }
+    }
+    
