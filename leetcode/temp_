@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt(); // the number of temperatures to analyze
+
+        // Variable to store the closest temperature
+        int closestToZero = Integer.MAX_VALUE;
+
+        // If no temperatures are provided
+        if (n == 0) {
+            System.out.println(0);
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            int t = in.nextInt(); // Read the temperature
+
+            // Check if the current temperature is closer to zero
+            if (Math.abs(t) < Math.abs(closestToZero)) {
+                closestToZero = t;
+            } else if (Math.abs(t) == Math.abs(closestToZero) && t > closestToZero) {
+                // If two temperatures are equally close to zero, pick the positive one
+                closestToZero = t;
+            }
+        }
+
+        // Output the closest temperature to zero
+        System.out.println(closestToZero);
+    }
+}
